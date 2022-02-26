@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import "colors";
+@import "cursor";
 
 * {
   box-sizing: border-box;
+  cursor: none;
 }
 
 html,
@@ -23,5 +26,5 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justity-items: center;
+  justify-items: center;
 }

@@ -4,10 +4,6 @@ const Header = () => {
     <>
       <Head>
         <title>Ash Muhamad | Portfolio</title>
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap')
-        </style>
       </Head>
     </>
   );
