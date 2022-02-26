@@ -5,7 +5,7 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  border: 1px solid black;
+  border: 1px solid rgba(20, 0, 0, 0.5);
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
   -webkit-transition-timing-function: ease-out;
@@ -32,6 +32,7 @@
   background-color: rgba(31, 30, 30, 0.4);
   mix-blend-mode: difference;
   background-color: white;
+  border: none;
 }
 .dot.hovered {
   display: none;
