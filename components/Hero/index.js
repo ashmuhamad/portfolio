@@ -5,31 +5,26 @@ import { MouseContext } from "../../contexts/MouseContextProvider";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
-  const { cursorChangeHandler } = useContext(MouseContext);
 
   return (
     <div className={styles.heroContainer}>
       <div className={styles.heroWrapper}>
         <div className={styles.heroTyping}>
-          <p
-            onMouseEnter={() => cursorChangeHandler("hovered")}
-            onMouseLeave={() => cursorChangeHandler("")}
-          >
-            Ash Muhamad
-          </p>
           <Typewriter
+          options={ {loop: true,     autoStart: true} }
             onInit={(typewriter) => {
               typewriter
-                .typeString("Hello World!")
-                .callFunction(() => {
-                  console.log("String typed out!");
-                })
-                .pauseFor(2500)
-                .deleteAll()
-                .callFunction(() => {
-                  console.log("All strings were deleted");
-                })
-                .start();
+              .typeString('Hi my name is <strong>Ash</strong>!')
+              .pauseFor(1200)
+              .typeString(' I am a <strong><span style="color: #27ae60;">UI/UX Designer</span></strong>')
+              .pauseFor(750)
+              .deleteChars(14)
+              .typeString('<strong><span style="color: #27ae60;">Game Developer</span></strong>')
+              .pauseFor(750)
+              .deleteChars(15)
+              .typeString('<strong><span style="color: #27ae60;">Content Creator</span></strong>')
+              .start();
+              
             }}
           />
         </div>
