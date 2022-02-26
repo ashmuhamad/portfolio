@@ -1,0 +1,77 @@
+@import "../../styles/fonts";
+
+.navContainer {
+  width: 100%;
+  height: 8.375rem;
+  display: flex;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  padding: 0;
+}
+
+.navWrapper {
+  margin: 1.5rem 2.1rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 767px) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.navLogo {
+  height: 5.375rem;
+  width: 5.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 2rem;
+
+  @media only screen and (max-width: 767px) {
+    height: 3.375rem;
+    width: 3.375rem;
+  }
+}
+
+.navItems {
+  font-family: $primary-font;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  width: 7.375rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  //   background-color: rgb(41, 211, 55);
+  letter-spacing: 4px;
+  width: auto;
+  overflow: hidden;
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2rem;
+    transform: translateY(0);
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
