@@ -2,30 +2,26 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
-  background-color: rgba(31, 30, 30, 0.8);
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
-  transform: translate(-50%, -50%);
-  -webkit-transition-duration: 100ms;
-  transition-duration: 100ms;
+  border: 1px solid black;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
-  will-change: width, height, transform, border;
   z-index: 999;
   pointer-events: none;
-  mix-blend-mode: difference;
 }
 
 .dot {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   width: 8px;
   height: 8px;
   background-color: black;
   border-radius: 100%;
-  transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: none;
 }

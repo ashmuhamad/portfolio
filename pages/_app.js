@@ -1,14 +1,15 @@
-import Cursor from "../components/Misc/Cursor";
+import { AnimatePresence } from "framer-motion";
 import MouseContextProvider from "../contexts/MouseContextProvider";
 import "../styles/global.scss";
 
 function Portfolio({ Component, pageProps }) {
   return (
     <>
-      <MouseContextProvider>
-        <Cursor />
-        <Component {...pageProps} />
-      </MouseContextProvider>
+      <AnimatePresence>
+        <MouseContextProvider>
+          <Component {...pageProps} />
+        </MouseContextProvider>
+      </AnimatePresence>
     </>
   );
 }

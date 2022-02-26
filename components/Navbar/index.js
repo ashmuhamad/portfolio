@@ -17,7 +17,7 @@ const Navbar = () => {
             onMouseEnter={() => cursorChangeHandler("hovered")}
             onMouseLeave={() => cursorChangeHandler("")}
             whileHover={{
-              scale: 1.3,
+              scale: 1.5,
             }}
             transition={{ delay: 0.1 }}
             className={styles.navLogo}
@@ -32,21 +32,21 @@ const Navbar = () => {
                 onMouseEnter={() => cursorChangeHandler("hovered")}
                 onMouseLeave={() => cursorChangeHandler("")}
                 whileHover={{
-                  scale: 1.2,
+                  scale: 1.15,
                 }}
                 transition={{ delay: 0.1 }}
               >
-                <a>WORKS</a>
+                <a>projects</a>
               </motion.li>
               <motion.li
                 onMouseEnter={() => cursorChangeHandler("hovered")}
                 onMouseLeave={() => cursorChangeHandler("")}
                 whileHover={{
-                  scale: 1.2,
+                  scale: 1.15,
                 }}
                 transition={{ delay: 0.1 }}
               >
-                <a>CONTACT</a>
+                <a>contact</a>
               </motion.li>
             </ul>
           </div>
