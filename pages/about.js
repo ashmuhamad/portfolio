@@ -1,16 +1,15 @@
 import Header from "../components/Header";
-import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import { Cursorv2 } from "../components/Misc/Cursorv2";
 
-export default function Porfolio() {
+export default function About() {
   return (
     <>
       <Cursorv2 />
       <Header />
       <div className="bodyContainer">
         <Navbar />
-        <Hero />
+        <div>about</div>
       </div>
     </>
   );

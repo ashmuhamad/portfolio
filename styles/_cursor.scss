@@ -34,6 +34,12 @@
   background-color: white;
   border: none;
 }
-.dot.hovered {
+.dot.hovered,
+.dot.clicked {
   display: none;
+}
+
+.ring.clicked {
+  width: 75px;
+  height: 75px;
 }

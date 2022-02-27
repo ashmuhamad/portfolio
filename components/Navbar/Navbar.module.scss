@@ -24,6 +24,11 @@
   }
 }
 
+.navLogoWrapper {
+  @media only screen and (max-width: 767px) {
+    padding-top: 5rem;
+  }
+}
 .navLogo {
   height: 5.375rem;
   width: 5.375rem;
@@ -35,8 +40,11 @@
   margin-left: 2rem;
 
   @media only screen and (max-width: 767px) {
-    height: 4.375rem;
-    width: 4.375rem;
+    height: 6.375rem;
+    width: 6.375rem;
+    margin: 0;
+    border: 1px solid rgb(153, 153, 153);
+    background-color: white;
   }
 }
 

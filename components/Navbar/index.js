@@ -13,23 +13,27 @@ const Navbar = () => {
     <>
       <div className={styles.navContainer}>
         <div className={styles.navWrapper}>
-          <motion.div
-            onMouseEnter={() => cursorChangeHandler("hovered")}
-            onMouseLeave={() => cursorChangeHandler("")}
-            whileHover={{
-              scale: 1.5,
-            }}
-            transition={{ delay: 0.1 }}
-            className={styles.navLogo}
-          >
-            <Link href={"/about"}>
-              <Image src={logo} alt="Logo" />
-            </Link>
-          </motion.div>
+          <div className={styles.navLogoWrapper}>
+            <motion.div
+              onMouseEnter={() => cursorChangeHandler("hovered")}
+              onMouseLeave={() => cursorChangeHandler("")}
+              onMouseDown={() => cursorChangeHandler("clicked")}
+              whileHover={{
+                scale: 1.5,
+              }}
+              transition={{ delay: 0.1 }}
+              className={styles.navLogo}
+            >
+              <Link href={"/"}>
+                <Image src={logo} alt="Logo" />
+              </Link>
+            </motion.div>
+          </div>
           <div className={styles.navItems}>
             <ul>
               <motion.li
                 onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseDown={() => cursorChangeHandler("clicked")}
                 onMouseLeave={() => cursorChangeHandler("")}
                 whileHover={{
                   scale: 1.15,
@@ -40,13 +44,14 @@ const Navbar = () => {
               </motion.li>
               <motion.li
                 onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseDown={() => cursorChangeHandler("clicked")}
                 onMouseLeave={() => cursorChangeHandler("")}
                 whileHover={{
                   scale: 1.15,
                 }}
                 transition={{ delay: 0.1 }}
               >
-                <a>contact</a>
+                <Link href={"/about"}>contact</Link>
               </motion.li>
             </ul>
           </div>
