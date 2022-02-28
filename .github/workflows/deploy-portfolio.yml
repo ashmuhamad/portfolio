@@ -29,7 +29,7 @@ jobs:
     - run: npm run build 
     - run: npm export
     
-     - name: Deploy 🚀
+    - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages 
