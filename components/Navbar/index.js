@@ -9,6 +9,23 @@ import { MouseContext } from "../../contexts/MouseContextProvider";
 const Navbar = () => {
   const { cursorChangeHandler } = useContext(MouseContext);
 
+  const variants = {
+    initial: {
+      y: 30,
+      opacity: 0,
+    },
+
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const stagger = { animate: { transition: { staggerChildren: 0.2 } } };
+
   return (
     <>
       <div className={styles.navContainer}>
@@ -30,15 +47,15 @@ const Navbar = () => {
             </motion.div>
           </div>
           <div className={styles.navItems}>
-            <ul>
+            <motion.ul variants={stagger} initial="initial" animate="animate">
               <motion.li
                 onMouseEnter={() => cursorChangeHandler("hovered")}
                 onMouseDown={() => cursorChangeHandler("clicked")}
                 onMouseLeave={() => cursorChangeHandler("")}
+                variants={variants}
                 whileHover={{
                   scale: 1.15,
                 }}
-                transition={{ delay: 0.1 }}
               >
                 <a>projects</a>
               </motion.li>
@@ -46,14 +63,14 @@ const Navbar = () => {
                 onMouseEnter={() => cursorChangeHandler("hovered")}
                 onMouseDown={() => cursorChangeHandler("clicked")}
                 onMouseLeave={() => cursorChangeHandler("")}
+                variants={variants}
                 whileHover={{
                   scale: 1.15,
                 }}
-                transition={{ delay: 0.1 }}
               >
                 <Link href={"/about"}>contact</Link>
               </motion.li>
-            </ul>
+            </motion.ul>
           </div>
         </div>
       </div>

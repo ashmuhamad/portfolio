@@ -2,22 +2,46 @@ import styles from "./Hero.module.scss";
 import { useContext } from "react";
 import { MouseContext } from "../../contexts/MouseContextProvider";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const { cursorChangeHandler } = useContext(MouseContext);
 
+  const variants = {
+    initial: {
+      y: 20,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.2,
+      },
+    },
+  };
+
+  const stagger = { animate: { transition: { staggerChildren: 0.2 } } };
+
   return (
     <div className={styles.heroContainer}>
       <div className={styles.heroWrapper}>
-        <div className={styles.heroTyping}>
-          <div
+        <motion.div
+          variants={stagger}
+          initial="initial"
+          animate="animate"
+          className={styles.heroTyping}
+        >
+          <motion.div
             onMouseEnter={() => cursorChangeHandler("hovered")}
             onMouseLeave={() => cursorChangeHandler("")}
-            onmousedown={() => cursorChangeHandler("clicked")}
+            onMouseDown={() => cursorChangeHandler("clicked")}
+            variants={variants}
           >
             Ash Muhamad
-          </div>
-          <div className={styles.subheading}>
+          </motion.div>
+          <motion.div className={styles.subheading} variants={variants}>
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
@@ -26,8 +50,8 @@ const Hero = () => {
                   .start();
               }}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
