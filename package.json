@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "export": "next export"
   },
   "dependencies": {
     "framer-motion": "^6.2.8",
