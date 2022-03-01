@@ -57,7 +57,7 @@ const Navbar = () => {
                   scale: 1.15,
                 }}
               >
-                <a>projects</a>
+                <Link href={"/projects"}>projects</Link>
               </motion.li>
               <motion.li
                 onMouseEnter={() => cursorChangeHandler("hovered")}
@@ -68,7 +68,7 @@ const Navbar = () => {
                   scale: 1.15,
                 }}
               >
-                <Link href={"/about"}>contact</Link>
+                <Link href={"/about"}>about</Link>
               </motion.li>
             </motion.ul>
           </div>
