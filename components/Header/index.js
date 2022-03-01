@@ -7,7 +7,6 @@ const Header = () => {
         <meta
           name="description"
           content="Welcome to my portfolio. Coded with love, Ash."
-          key="description"
         />
         <meta
           property="og:title"
