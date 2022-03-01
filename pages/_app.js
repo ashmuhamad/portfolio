@@ -9,10 +9,10 @@ function Portfolio({ Component, pageProps }) {
   return (
     <>
       <Header />
+      <Navbar />
+      <Cursorv2 />
       <AnimatePresence>
         <MouseContextProvider>
-          <Navbar />
-          <Cursorv2 />
           <Component {...pageProps} />
         </MouseContextProvider>
       </AnimatePresence>
