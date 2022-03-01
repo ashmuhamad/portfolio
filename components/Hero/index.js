@@ -37,6 +37,7 @@ const Hero = () => {
             onMouseEnter={() => cursorChangeHandler("hovered")}
             onMouseLeave={() => cursorChangeHandler("")}
             onMouseDown={() => cursorChangeHandler("clicked")}
+            onClick={() => cursorChangeHandler("hovered")}
             variants={variants}
           >
             Ash Muhamad
