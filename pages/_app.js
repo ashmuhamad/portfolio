@@ -12,6 +12,7 @@ function Portfolio({ Component, pageProps }) {
         <MouseContextProvider>
           <Header />
           <Cursorv2 />
+          <Navbar />
           <Component {...pageProps} />
         </MouseContextProvider>
       </AnimatePresence>
