@@ -29,7 +29,7 @@ body {
     linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
     $dot-color;
   background-size: $dot-space $dot-space;
-  font-family: $primary-font;
+  font-family: "Open Sans", sans-serif;
 }
 
 .bodyContainer {
