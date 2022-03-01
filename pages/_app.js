@@ -8,11 +8,11 @@ import "../styles/global.scss";
 function Portfolio({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <Navbar />
-      <Cursorv2 />
       <AnimatePresence>
         <MouseContextProvider>
+          <Header />
+          <Navbar />
+          <Cursorv2 />
           <Component {...pageProps} />
         </MouseContextProvider>
       </AnimatePresence>
