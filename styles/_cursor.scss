@@ -40,6 +40,10 @@
 }
 
 .ring.clicked {
-  width: 75px;
-  height: 75px;
+  width: 8px;
+  height: 8px;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }

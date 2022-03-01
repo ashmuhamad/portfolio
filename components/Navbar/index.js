@@ -35,6 +35,7 @@ const Navbar = () => {
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
               onMouseDown={() => cursorChangeHandler("clicked")}
+              onClick={() => cursorChangeHandler("hovered")}
               whileHover={{
                 scale: 1.5,
               }}
@@ -52,6 +53,7 @@ const Navbar = () => {
                 onMouseEnter={() => cursorChangeHandler("hovered")}
                 onMouseDown={() => cursorChangeHandler("clicked")}
                 onMouseLeave={() => cursorChangeHandler("")}
+                onClick={() => cursorChangeHandler("hovered")}
                 variants={variants}
                 whileHover={{
                   scale: 1.15,
@@ -63,6 +65,7 @@ const Navbar = () => {
                 onMouseEnter={() => cursorChangeHandler("hovered")}
                 onMouseDown={() => cursorChangeHandler("clicked")}
                 onMouseLeave={() => cursorChangeHandler("")}
+                onClick={() => cursorChangeHandler("hovered")}
                 variants={variants}
                 whileHover={{
                   scale: 1.15,
