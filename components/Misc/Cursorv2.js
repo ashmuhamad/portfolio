@@ -27,6 +27,7 @@ export const Cursorv2 = () => {
       ringY.set(e.clientY - 20);
     };
 
+
     window.addEventListener("mousemove", moveCursor);
     window.addEventListener("mousemove", moveRing);
     return () => {
