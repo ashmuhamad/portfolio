@@ -5,6 +5,16 @@
 * {
   box-sizing: border-box;
   cursor: none;
+  ::-moz-selection {
+    color: $bg-color;
+    background: $text-select;
+  }
+
+  ::selection {
+    color: $bg-color;
+    background: $text-select;
+  }
+  color: $primary-color;
 }
 
 a {
