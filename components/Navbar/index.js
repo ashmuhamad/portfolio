@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.navContainer}>
-        <div className={styles.navWrapper}>
+        <div className={styles.navWrapper} id="unselectable">
           <div className={styles.navLogoWrapper}>
             <motion.div
               onMouseEnter={() => cursorChangeHandler("hovered")}

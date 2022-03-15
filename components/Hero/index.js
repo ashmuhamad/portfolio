@@ -26,7 +26,7 @@ const Hero = () => {
 
   return (
     <div className={styles.heroContainer}>
-      <div className={styles.heroWrapper}>
+      <div className={styles.heroWrapper} id="unselectable">
         <motion.div
           variants={stagger}
           initial="initial"
@@ -43,7 +43,7 @@ const Hero = () => {
             Ash Muhamad
           </motion.div>
           <motion.div className={styles.subheading} variants={variants}>
-            <Typewriter
+            <Typewriter 
               onInit={(typewriter) => {
                 typewriter
                   .typeString("Welcome to my portfolio")
